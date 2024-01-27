@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
-{
+{   
     public List<Card> deck = new List<Card>();
     public Transform[] cardSlots;
     public bool[] availableCardSlots;
@@ -24,27 +24,15 @@ public class GameManager : MonoBehaviour
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*// Start is called before the first frame update
+    // Start is called before the first frame update
     void Start()
     {
-        
+        while(availableCardSlots[availableCardSlots.Length-1]!=false){
+            DrawHand();
+        }
     }
 
-    // Update is called once per frame
+    /*// Update is called once per frame
     void Update()
     {
         
