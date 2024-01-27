@@ -59,7 +59,7 @@ public class Emoji : MonoBehaviour
         Politician,
         Vacation,
         Failing,
-        Concert,
+        Stadium,
     };
 
     private static Dictionary<Name_of_Emoji, string> Emoji_To_UTF = new Dictionary<Name_of_Emoji, string>()
@@ -114,7 +114,7 @@ public class Emoji : MonoBehaviour
         { Name_of_Emoji.One, "OneF" },
         { Name_of_Emoji.Politician, "Politician" },
         { Name_of_Emoji.Vacation, "Vacation" },
-        { Name_of_Emoji.Concert, "Concert" },
+        { Name_of_Emoji.Stadium, "Stadium" },
         { Name_of_Emoji.Failing, "Failing" },
     };
 
