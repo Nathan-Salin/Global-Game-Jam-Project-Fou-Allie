@@ -38,17 +38,14 @@ public class Card : MonoBehaviour
             transform.localScale += new Vector3(-0.5f, 0f,-0.5f);
         }
     }
-    /*public void setText()
+    public void setText(string text)
     {
         if(hasText==false){
-            int index=Random.Range(0, jokes.Count);
-            cardText.text = jokes[index];
-            Debug.Log(jokes[index]);
-            jokes.RemoveAt(index);
+            cardText.text = text;  
             hasText=true;
         }
         
-    }*/
+    }
 
     private IEnumerator destroyCard(){
         yield return new WaitForSeconds(2);

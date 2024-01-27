@@ -10,22 +10,26 @@ public class GameManager : MonoBehaviour
     public Transform[] cardSlots;
     public bool[] availableCardSlots;
 
+    private JokeContainer jokeContainer;
+
     
     public void DrawHand(){
         for(int i=0; i<availableCardSlots.Length; i++){
             if(availableCardSlots[i]==true){
-                Instantiate(card_prefab, cardSlots[i]);
+                Joke joke=jokeContainer.get_random_joke();
+                GameObject cardInHand = Instantiate(card_prefab, cardSlots[i]);
+                Card card=gameObject.GetComponent<Card>();
+                card.setText(joke.get_full_joke());
                 availableCardSlots[i]=false;
                 return;
             }
         }
     }
 
-
-
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        jokeContainer = new JokeContainer();
         while(availableCardSlots[availableCardSlots.Length-1]!=false){
             DrawHand();
             

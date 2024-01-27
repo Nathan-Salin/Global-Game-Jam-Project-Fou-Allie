@@ -5,7 +5,7 @@ using System.Xml.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Joke_Container : MonoBehaviour
+public class JokeContainer : MonoBehaviour
 {
 
     private List<Joke> jokeList = new List<Joke>();
@@ -13,23 +13,23 @@ public class Joke_Container : MonoBehaviour
 
     private List<string> parts_one = new List<string>()
     {
-        "Quelle est le sport préféré des Tours ?",
-        "Quelle l’attraction favorite d’une tours ?",
+        "Quelle est le sport prÃ©fÃ©rÃ© des Tours ?",
+        "Quelle l'attraction favorite d'une tours ?",
         "Comment appelle-t-on un fou qui fait des farces ?",
-        "Pourquoi le fou n'est-il jamais bon pour donner la météo ?",
-        "Comment le roi échappait-il aux impôts ?",
+        "Pourquoi le fou n'est-il jamais bon pour donner la mÃ©tÃ©o ?",
+        "Comment le roi Ã©chappait-il aux impÃ´ts ?",
         "Qu'est-ce qui rend les pions si optimistes ?",
         "Comment appelle-t-on un pion qui aime la magie ?"
 
     };
     private List<string> parts_two = new List<string>()
     {
-        "Le ‘roquet’ sur glace !",
+        "Le roquet sur glace !",
         "Le tourniquet ! ",
         "Un fou-rire !",
-        "Parce qu'il ne peut jamais prévoir dans quelle direction le vent va tourner !",
-        "Il se cachait derrière ses pions.",
-        "Ils voient toujours la promotion à la fin du tunnel.",
+        "Parce qu'il ne peut jamais prÃ©voir dans quelle direction le vent va tourner !",
+        "Il se cachait derriÃ¨re ses pions.",
+        "Ils voient toujours la promotion Ã  la fin du tunnel.",
         "Un piondini !"
     };
 
@@ -45,7 +45,7 @@ public class Joke_Container : MonoBehaviour
     };
 
 
-    void Start()
+    public JokeContainer()
     {
         for (int i = 0; i < parts_one.Count; i++)
         {
@@ -56,8 +56,11 @@ public class Joke_Container : MonoBehaviour
 
    
     public Joke get_random_joke()
-    {
+    {   
         int random_index = UnityEngine.Random.Range(0,jokeList.Count);
+        while(jokeListChecked[random_index]==true){random_index = UnityEngine.Random.Range(0,jokeList.Count);}
+        
+        jokeListChecked[random_index] = true;
         return jokeList[random_index];
     }
 }
