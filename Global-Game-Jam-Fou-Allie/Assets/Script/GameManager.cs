@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {   
     private List<Joke> jokes = new List<Joke>();
     private List<GameObject> cards_in_game = new List<GameObject>();
     private Joke current_joke = null;
-
+    bool gameHasEnded=false;
     public GameObject card_prefab;
     public Transform cardSlots;
     public int availableCardSlots;
@@ -55,6 +56,15 @@ public class GameManager : MonoBehaviour
         speach_Bubble_Script.setBubleTect(new_text);
     }
 
+    private void GameOver(){
+        if(gameHasEnded==false){
+            gameHasEnded=true;
+            Invoke("Restart", 2f);
+        }
+    }
+    private void Restart(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
     // Start is called before the first frame update
     void Start()
     {   
@@ -74,7 +84,7 @@ public class GameManager : MonoBehaviour
                 bool isJokeRight = is_joke_right(jokes[i]);
                 jokes.RemoveAt(i);
                 if (!isJokeRight) {
-                    //Add Game over sequences ! 
+                    GameOver();
                     Debug.Log("U FAILED SON !");
                 }
                 else
