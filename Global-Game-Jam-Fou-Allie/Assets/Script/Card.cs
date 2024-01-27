@@ -17,11 +17,15 @@ public class Card : MonoBehaviour
             transform.position += Vector3.down * 3;
             transform.position += Vector3.forward * 3;
             hasBeenPlayed =true;
-            
+            StartCoroutine (SpawnDelay());
             gm.availableCardSlots[handIndex]=true;
         }
     }
 
+    private IEnumerator SpawnDelay(){
+        yield return new WaitForSeconds(3);
+        Destroy(gameObject);
+    }
 
 
 
