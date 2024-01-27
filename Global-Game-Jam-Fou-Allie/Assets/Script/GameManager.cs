@@ -5,18 +5,17 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {   
-    public List<Card> deck = new List<Card>();
+
+    public GameObject card_prefab;
     public Transform[] cardSlots;
     public bool[] availableCardSlots;
+
+    
     public void DrawHand(){
-        Card randCard = deck[Random.Range(0, deck.Count)];
         for(int i=0; i<availableCardSlots.Length; i++){
             if(availableCardSlots[i]==true){
-                randCard.gameObject.SetActive(true);
-                randCard.handIndex=i;
-                randCard.transform.position = cardSlots[i].position;
+                Instantiate(card_prefab, cardSlots[i]);
                 availableCardSlots[i]=false;
-                deck.Remove(randCard);
                 return;
             }
         }
@@ -29,6 +28,7 @@ public class GameManager : MonoBehaviour
     {
         while(availableCardSlots[availableCardSlots.Length-1]!=false){
             DrawHand();
+            
         }
     }
 
