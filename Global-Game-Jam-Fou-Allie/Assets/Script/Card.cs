@@ -10,11 +10,12 @@ public class Card : MonoBehaviour
     public int handIndex;
     public bool hasText;
     public bool hasBeenHovered;
-    private GameManager gm;
     public TMP_Text cardText;
+
+    public Hand hand;
     void Start()
     {
-        gm=FindObjectOfType<GameManager>();
+       
     }
 
     private void OnMouseDown(){
@@ -23,19 +24,18 @@ public class Card : MonoBehaviour
             transform.position += Vector3.forward * 3;
             hasBeenPlayed =true;
             StartCoroutine (destroyCard());
-            gm.availableCardSlots[handIndex]=true;
         }
     }
 
     private void OnMouseEnter(){
         if(hasBeenPlayed==false && hasBeenHovered==false){
-            transform.localScale +=new Vector3(0.5f, 0.0f,0.5f);
+            transform.localScale +=new Vector3(0.02f, 0.0f,0.02f);
         }
         
     }
     private void OnMouseExit(){
         if(hasBeenPlayed==false && hasBeenHovered==false){
-            transform.localScale += new Vector3(-0.5f, 0f,-0.5f);
+            transform.localScale += new Vector3(-0.02f, 0f,-0.02f);
         }
     }
     public void setText(string text)
@@ -47,7 +47,12 @@ public class Card : MonoBehaviour
         
     }
 
+    public void setHand(Hand hand_to_set) {
+        hand = hand_to_set;
+    }
+
     private IEnumerator destroyCard(){
+        hand.remove_card_from_hand(gameObject);
         yield return new WaitForSeconds(2);
         Destroy(gameObject);
     }

@@ -5,7 +5,7 @@ using System.Xml.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class JokeContainer : MonoBehaviour
+public class JokeContainer
 {
 
     private List<Joke> jokeList = new List<Joke>();
@@ -13,24 +13,24 @@ public class JokeContainer : MonoBehaviour
 
     private List<string> parts_one = new List<string>()
     {
-        "Quelle est le sport préféré des Tours ?",
-        "Quelle l'attraction favorite d'une tours ?",
-        "Comment appelle-t-on un fou qui fait des farces ?",
-        "Pourquoi le fou n'est-il jamais bon pour donner la météo ?",
-        "Comment le roi échappait-il aux impôts ?",
-        "Qu'est-ce qui rend les pions si optimistes ?",
-        "Comment appelle-t-on un pion qui aime la magie ?"
+        "Quelle est le sport préféré des Tours ?\n",
+        "Quelle l'attraction favorite d'une tours ?\n",
+        "Comment appelle-t-on un fou qui fait des farces ?\n",
+        "Pourquoi le fou n'est-il jamais bon pour donner la météo ?\n",
+        "Comment le roi échappait-il aux impôts ?\n",
+        "Qu'est-ce qui rend les pions si optimistes ?\n",
+        "Comment appelle-t-on un pion qui aime la magie ?\n"
 
     };
     private List<string> parts_two = new List<string>()
     {
-        "Le roquet sur glace !",
-        "Le tourniquet ! ",
-        "Un fou-rire !",
-        "Parce qu'il ne peut jamais prévoir dans quelle direction le vent va tourner !",
-        "Il se cachait derrière ses pions.",
-        "Ils voient toujours la promotion à la fin du tunnel.",
-        "Un piondini !"
+        "Le roquet sur glace !\n",
+        "Le tourniquet !\n ",
+        "Un fou-rire !\n",
+        "Parce qu'il ne peut jamais prévoir dans quelle direction le vent va tourner !\n",
+        "Il se cachait derrière ses pions !\n",
+        "Ils voient toujours la promotion à la fin du tunnel !\n",
+        "Un piondini !\n"
     };
 
     private List<List<Emoji.Name_of_Emoji>> emojis_list = new List<List<Emoji.Name_of_Emoji>>()

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Joke : MonoBehaviour
+public class Joke
 {
     private string first_part_of_joke = null;
     private string second_part_of_joke = null;

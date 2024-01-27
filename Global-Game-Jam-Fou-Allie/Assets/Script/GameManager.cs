@@ -7,33 +7,32 @@ public class GameManager : MonoBehaviour
 {   
 
     public GameObject card_prefab;
-    public Transform[] cardSlots;
-    public bool[] availableCardSlots;
+    public Transform cardSlots;
+    public int availableCardSlots;
+    public Hand player_hand;
 
     private JokeContainer jokeContainer;
 
     
     public void DrawHand(){
-        for(int i=0; i<availableCardSlots.Length; i++){
-            if(availableCardSlots[i]==true){
-                Joke joke=jokeContainer.get_random_joke();
-                GameObject cardInHand = Instantiate(card_prefab, cardSlots[i]);
-                Card card=gameObject.GetComponent<Card>();
-                card.setText(joke.get_full_joke());
-                availableCardSlots[i]=false;
-                return;
-            }
+        for(int i=0; i<availableCardSlots; i++){
+            Joke joke=jokeContainer.get_random_joke();
+            GameObject cardInHand = Instantiate(card_prefab, cardSlots);
+            cardInHand.SetActive(false);
+            Card card = cardInHand.GetComponent<Card>();
+            card.hand = player_hand;
+            card.setText(joke.get_full_joke());
+            player_hand.add_card_to_hand(cardInHand);
+
         }
+        player_hand.show_card();
     }
 
     // Start is called before the first frame update
     void Start()
     {   
         jokeContainer = new JokeContainer();
-        while(availableCardSlots[availableCardSlots.Length-1]!=false){
-            DrawHand();
-            
-        }
+        DrawHand();
     }
 
     /*// Update is called once per frame
