@@ -60,6 +60,7 @@ public class Emoji : MonoBehaviour
         Vacation,
         Failing,
         Stadium,
+        Down
     };
 
     private static Dictionary<Name_of_Emoji, string> Emoji_To_UTF = new Dictionary<Name_of_Emoji, string>()
@@ -111,11 +112,12 @@ public class Emoji : MonoBehaviour
         { Name_of_Emoji.Feet, "Feet" },
         { Name_of_Emoji.Music, "Music" },
         { Name_of_Emoji.Love, "Love" },
-        { Name_of_Emoji.One, "OneF" },
+        { Name_of_Emoji.One, "One" },
         { Name_of_Emoji.Politician, "Politician" },
         { Name_of_Emoji.Vacation, "Vacation" },
         { Name_of_Emoji.Stadium, "Stadium" },
         { Name_of_Emoji.Failing, "Failing" },
+        { Name_of_Emoji.Down, "Down" },
     };
 
     public static string get_code_for_Emoji(Name_of_Emoji name)
