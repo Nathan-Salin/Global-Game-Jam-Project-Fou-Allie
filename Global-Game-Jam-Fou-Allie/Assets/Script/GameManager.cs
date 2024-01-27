@@ -70,6 +70,7 @@ public class GameManager : MonoBehaviour
             if (cards_in_game[i] == null)
             {
                 cards_in_game.RemoveAt(i);
+                if (cards_in_game.Count == 0) break;
                 bool isJokeRight = is_joke_right(jokes[i]);
                 jokes.RemoveAt(i);
                 if (!isJokeRight) {

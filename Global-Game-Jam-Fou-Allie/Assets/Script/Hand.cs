@@ -10,9 +10,6 @@ public class Hand : MonoBehaviour
 
     private int current_card = 0;
 
-    public Button left_rotation;
-    public Button right_rotation;
-
     public void add_card_to_hand(GameObject card) {  
         cardList.Add(card); 
     }
@@ -69,31 +66,5 @@ public class Hand : MonoBehaviour
             show_card();
         }
     }
-
-    private float dernierChangementDeCarte = 0f;
-    private float delaiEntreChangements = 1f; // Un délai d'une seconde entre chaque changement
-
-    public void Update()
-    {
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            if (Time.time - dernierChangementDeCarte >= delaiEntreChangements)
-            {
-                next_card();
-                dernierChangementDeCarte = Time.time;
-            }
-        }
-
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            if (Time.time - dernierChangementDeCarte >= delaiEntreChangements)
-            {
-                previous_card();
-                dernierChangementDeCarte = Time.time;
-            }
-        }
-    }
-
-
 
 }

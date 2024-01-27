@@ -158,9 +158,6 @@ public class JokeContainer
 
     public JokeContainer()
     {
-        Debug.Log(parts_one.Count);
-        Debug.Log(parts_two.Count);
-        Debug.Log(emojis_list.Count);
         for (int i = 0; i < parts_one.Count; i++)
         {
             jokeList.Add(new(parts_one[i], parts_two[i], emojis_list[i]));

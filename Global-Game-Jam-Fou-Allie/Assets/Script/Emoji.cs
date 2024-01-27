@@ -118,6 +118,7 @@ public class Emoji : MonoBehaviour
         { Name_of_Emoji.Stadium, "Stadium" },
         { Name_of_Emoji.Failing, "Failing" },
         { Name_of_Emoji.Down, "Down" },
+        {Name_of_Emoji.Attraction,"Attraction"},
     };
 
     public static string get_code_for_Emoji(Name_of_Emoji name)

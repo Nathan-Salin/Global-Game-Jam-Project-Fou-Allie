@@ -92,14 +92,14 @@ MonoBehaviour:
     m_Unicode: 65534
     m_GlyphIndex: 8
     m_Scale: 1
-    m_Name: Dacing_Woman
-    m_HashCode: 516823971
+    m_Name: Dancing_Woman
+    m_HashCode: -1240709075
   - m_ElementType: 2
     m_Unicode: 65534
     m_GlyphIndex: 9
     m_Scale: 1
-    m_Name: Dacing_Man
-    m_HashCode: 887875611
+    m_Name: Dancing_Man
+    m_HashCode: 1659289365
   - m_ElementType: 2
     m_Unicode: 65534
     m_GlyphIndex: 10
