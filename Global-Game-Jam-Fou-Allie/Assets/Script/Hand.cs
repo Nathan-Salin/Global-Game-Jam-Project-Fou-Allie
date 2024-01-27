@@ -44,8 +44,6 @@ public class Hand : MonoBehaviour
     }
 
     public void next_card() {
-        Debug.Log("cardList Size = " + cardList.Count);
-        Debug.Log("current_card = " + current_card);
         if (cardList.Count!=1) {
             hide_card();
             if (current_card == cardList.Count - 1)
@@ -53,16 +51,12 @@ public class Hand : MonoBehaviour
                 current_card = 0;
             }
             else current_card++;
-            Debug.Log("cardList Size After = " + cardList.Count);
-            Debug.Log("current_card After = " + current_card);
             show_card();
         }
     }
 
     public void previous_card()
     {
-        Debug.Log("cardList Size = " + cardList.Count);
-        Debug.Log("current_card = " + current_card);
         if (cardList.Count != 1)
         {
             hide_card();
@@ -72,8 +66,6 @@ public class Hand : MonoBehaviour
             }
             else current_card --;
 
-            Debug.Log("cardList Size After = " + cardList.Count);
-            Debug.Log("current_card After = " + current_card);
             show_card();
         }
     }

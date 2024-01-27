@@ -153,11 +153,6 @@ public class JokeContainer
         new List<Emoji.Name_of_Emoji> { Emoji.Name_of_Emoji.Rock, Emoji.Name_of_Emoji.Music},
         new List<Emoji.Name_of_Emoji> { Emoji.Name_of_Emoji.Thinking, Emoji.Name_of_Emoji.Repeat},
 
-
-
-
-
-
     };
 
 

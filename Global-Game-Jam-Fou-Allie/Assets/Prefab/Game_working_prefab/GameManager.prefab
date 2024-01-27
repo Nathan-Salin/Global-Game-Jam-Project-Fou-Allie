@@ -45,8 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card_prefab: {fileID: 1390561936163094558, guid: 2bca113196f698a42af580dc8f37fe9b, type: 3}
-  cardSlots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  availableCardSlots: 010101
+  cardSlots: {fileID: 0}
+  availableCardSlots: 5
+  player_hand: {fileID: 0}
+  speach_Bubble_Script: {fileID: 0}

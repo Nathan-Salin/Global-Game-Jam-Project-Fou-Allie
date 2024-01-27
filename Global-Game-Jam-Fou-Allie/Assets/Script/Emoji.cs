@@ -79,7 +79,7 @@ public class Emoji : MonoBehaviour
         { Name_of_Emoji.Castle, "Castle" },
         { Name_of_Emoji.Happy, "Happy" },
         { Name_of_Emoji.Time, "Time" },
-        { Name_of_Emoji.Social, "SocialF" },
+        { Name_of_Emoji.Social, "Social" },
         { Name_of_Emoji.Repeat, "Repeat" },
         { Name_of_Emoji.Money, "Money" },
         { Name_of_Emoji.Rainbow, "Rainbow" },
@@ -123,6 +123,15 @@ public class Emoji : MonoBehaviour
     public static string get_code_for_Emoji(Name_of_Emoji name)
     {
         return Emoji_To_UTF[name];
+    }
+
+    public static string get_all_sprite_ref_for_emoji(List<Name_of_Emoji> list)
+    {
+        string result ="";
+        for (int i = 0; i < list.Count; i ++) {
+            result += ("<sprite name=" + get_code_for_Emoji(list[i]) + "> ");
+        }
+        return result;
     }
 
 }

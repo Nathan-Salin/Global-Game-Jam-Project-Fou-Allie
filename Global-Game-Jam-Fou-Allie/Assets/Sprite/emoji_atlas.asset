@@ -370,6 +370,12 @@ MonoBehaviour:
     m_Scale: 1
     m_Name: Politician
     m_HashCode: -1984531038
+  - m_ElementType: 2
+    m_Unicode: 65534
+    m_GlyphIndex: 62
+    m_Scale: 1
+    m_Name: "\U0001F3D6\uFE0FVacation"
+    m_HashCode: -486385140
   m_SpriteGlyphTable:
   - m_Index: 0
     m_Metrics:
@@ -1359,6 +1365,22 @@ MonoBehaviour:
       m_Y: 9
       m_Width: 16
       m_Height: 20
+    m_Scale: 1
+    m_AtlasIndex: 0
+    m_ClassDefinitionType: 0
+    sprite: {fileID: -34068862, guid: 85c04da1504a52c489d99590f3fb8a93, type: 3}
+  - m_Index: 62
+    m_Metrics:
+      m_Width: 20
+      m_Height: 20
+      m_HorizontalBearingX: -0
+      m_HorizontalBearingY: 20
+      m_HorizontalAdvance: 16
+    m_GlyphRect:
+      m_X: 200
+      m_Y: 9
+      m_Width: 40
+      m_Height: 30
     m_Scale: 1
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0

@@ -11,6 +11,7 @@ public class Card : MonoBehaviour
     public bool hasText;
     public bool hasBeenHovered;
     public TMP_Text cardText;
+    public Joke card_joke;
 
     public Hand hand;
     void Start()
@@ -47,10 +48,6 @@ public class Card : MonoBehaviour
         
     }
 
-    public void setHand(Hand hand_to_set) {
-        hand = hand_to_set;
-    }
-
     private IEnumerator destroyCard(){
         hand.remove_card_from_hand(gameObject);
         yield return new WaitForSeconds(2);
@@ -72,6 +69,6 @@ public class Card : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+  
     }
 }
