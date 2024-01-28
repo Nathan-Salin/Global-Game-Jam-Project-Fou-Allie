@@ -36,6 +36,11 @@ public class GameManager : MonoBehaviour
         choose_next_joke();
     }
 
+    public void ExitTheGame()
+    {
+        Application.Quit();
+    }
+
     private IEnumerator WaitForXseconds(float x)
     {
         yield return new WaitForSecondsRealtime(x);
@@ -128,6 +133,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         // Utiliser le temps écoulé pour déterminer le moment du prochain spawn
         
         for (int i = 0; i < cards_in_game.Count; i++) {
