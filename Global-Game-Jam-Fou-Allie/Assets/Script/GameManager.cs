@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
             gameHasEnded=true;
             player_hand.hide_card();
             player_hand.hide_UI();
-            StartCoroutine(GameOverWithDelay(5));
+            StartCoroutine(GameOverWithDelay(8));
         }
     }
 
