@@ -186,6 +186,49 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
     loop: 0
+  claps:
+  - name: Clap1
+    clip: {fileID: 8300000, guid: 8715c55b759062a4b8feb7b6b0c4b4b8, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
+  - name: Clap2
+    clip: {fileID: 8300000, guid: d340fb024baac20489b62af89937c9b5, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
+  - name: Clap3
+    clip: {fileID: 8300000, guid: 62a27730886e2964ba016e3280b538fc, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
+  - name: Clap4
+    clip: {fileID: 8300000, guid: 360c8d7fef3a8914da59d0b1c68f6607, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
+  - name: Clap5
+    clip: {fileID: 8300000, guid: d0ce4cb22f747244c9b7a643fab66c2c, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
+  - name: Clap6
+    clip: {fileID: 8300000, guid: d395a491ef5e49b41aa051c9abeff0c1, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
+  - name: Clap7
+    clip: {fileID: 8300000, guid: cdb501aa776152c498d6abe4de53822d, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
   mouseClick:
     name: MouseClick
     clip: {fileID: 8300000, guid: f469a1aab287c52409824f0561442484, type: 3}
