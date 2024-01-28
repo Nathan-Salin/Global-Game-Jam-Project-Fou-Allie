@@ -4,6 +4,7 @@ using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {   
@@ -19,6 +20,32 @@ public class GameManager : MonoBehaviour
     
 
     private JokeContainer jokeContainer;
+
+    private AudioManager audioManager;
+
+    public int number_of_sound_played = 10;
+    private int yes_sound_played = 0;
+    private int no_sound_played = 0;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        jokeContainer = new JokeContainer();
+        DrawHand();
+        choose_next_joke();
+    }
+
+    private IEnumerator WaitForXseconds(float x)
+    {
+        yield return new WaitForSecondsRealtime(x);
+    }
+    private IEnumerator GameOverWithDelay(float x)
+    {
+        yield return StartCoroutine(WaitForXseconds(x));
+        Restart();
+    }
+
 
     private void DrawHand(){
         for(int i=0; i<availableCardSlots; i++){
@@ -62,20 +89,40 @@ public class GameManager : MonoBehaviour
             gameHasEnded=true;
             player_hand.hide_card();
             player_hand.hide_UI();
-            
-            Restart();
+            StartCoroutine(GameOverWithDelay(5));
         }
     }
 
     private void Restart(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    // Start is called before the first frame update
-    void Start()
-    {   
-        jokeContainer = new JokeContainer();
-        DrawHand();
-        choose_next_joke();
+
+    private void Play_game_over_sonds()
+    {
+        if (no_sound_played < number_of_sound_played)
+        {
+            audioManager.PlayRandomBoo();
+            no_sound_played++;
+        }
+        else
+        {
+            // Arrêter l'invocation après dix appels
+            CancelInvoke("Play_game_over_sonds");
+        }
+    }
+
+    private void Play_ok_sounds()
+    {
+        if (yes_sound_played < number_of_sound_played)
+        {
+            audioManager.PlayRandomLaughing();
+            yes_sound_played++;
+        }
+        else
+        {
+            // Arrêter l'invocation après dix appels
+            CancelInvoke("Play_ok_sounds");
+        }
     }
 
     // Update is called once per frame
@@ -91,11 +138,16 @@ public class GameManager : MonoBehaviour
                 cards_in_game.RemoveAt(i);
                 bool isJokeRight = is_joke_right(joke_played);
                 if (!isJokeRight) {
+                    InvokeRepeating("Play_game_over_sonds", 0f, 0.1f);
+                    no_sound_played = 0;
                     GameOver();
                     Debug.Log("U FAILED SON !");
                 }
                 else
                 {
+
+                    yes_sound_played = 0;
+                    InvokeRepeating("Play_ok_sounds", 0f, 0.1f);
                     Debug.Log("NICE JOB !");
                     if(cards_in_game.Count == 0) break;
                     choose_next_joke();

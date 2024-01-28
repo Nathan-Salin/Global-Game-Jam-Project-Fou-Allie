@@ -57,3 +57,119 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
     loop: 1
+  laughingSounds:
+  - name: Rire1
+    clip: {fileID: 8300000, guid: 3a9cd600d92bf314a8aacc8591df92cd, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Rire2
+    clip: {fileID: 8300000, guid: f5e790259d640264c85f26363842d883, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Rire3
+    clip: {fileID: 8300000, guid: e9a79f19424114a4db272dbe6a993e7d, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Rire4
+    clip: {fileID: 8300000, guid: ba32a297af4d9534089ccaa5c41e9699, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Rire5
+    clip: {fileID: 8300000, guid: 5e22b3e5816b30741b6df0b6b3927807, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Rire6
+    clip: {fileID: 8300000, guid: 8b638264488090042a2648b02dfbd89a, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Rire7
+    clip: {fileID: 8300000, guid: ecf778c7dc4cde14084254a5bdbe2a0a, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Rire8
+    clip: {fileID: 8300000, guid: d1eec54cf08d56d42bdfd57e95e49d29, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Rire9
+    clip: {fileID: 8300000, guid: c6297b8ee0038694cbea5877cfaa3ded, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Rire10
+    clip: {fileID: 8300000, guid: d05e72d537e919e4599356337cd02875, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  booSounds:
+  - name: Tousse
+    clip: {fileID: 8300000, guid: 8e627aff66433144a901813ec90448cc, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Nul1
+    clip: {fileID: 8300000, guid: 95bf417bec8b95e4fa4ff84ade9aaa18, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Nul2
+    clip: {fileID: 8300000, guid: 9ba33004aaacfbc48908a0da4b5adbea, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Nul3
+    clip: {fileID: 8300000, guid: 02edc81daa0477349a1afb462d132409, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Nul4
+    clip: {fileID: 8300000, guid: 6b54c710ef0baab4a9de27156569abe1, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Nul5
+    clip: {fileID: 8300000, guid: caa4ae4c7f75f60488fc4daf023fdecd, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Nul6
+    clip: {fileID: 8300000, guid: 9e1ac26930758c944b1a71de5251396c, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Nul7
+    clip: {fileID: 8300000, guid: 5c21836140172a74faea121c42d40018, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Nul8
+    clip: {fileID: 8300000, guid: a007ccd9971a8d94fa1131f04aabb734, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
