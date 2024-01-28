@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    private void Play_game_over_sonds()
+    private void Play_game_over_sounds()
     {
         if (no_sound_played < number_of_sound_played)
         {
@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour
                 cards_in_game.RemoveAt(i);
                 bool isJokeRight = is_joke_right(joke_played);
                 if (!isJokeRight) {
-                    InvokeRepeating("Play_game_over_sonds", 0f, 0.1f);
+                    InvokeRepeating("Play_game_over_sounds", 2f, 0.1f);
                     no_sound_played = 0;
                     GameOver();
                     Debug.Log("U FAILED SON !");
@@ -147,7 +147,7 @@ public class GameManager : MonoBehaviour
                 {
 
                     yes_sound_played = 0;
-                    InvokeRepeating("Play_ok_sounds", 0f, 0.1f);
+                    InvokeRepeating("Play_ok_sounds", 2f, 0.1f);
                     Debug.Log("NICE JOB !");
                     if(cards_in_game.Count == 0) break;
                     choose_next_joke();

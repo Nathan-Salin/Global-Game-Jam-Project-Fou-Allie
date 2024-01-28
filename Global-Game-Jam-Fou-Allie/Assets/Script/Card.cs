@@ -15,10 +15,12 @@ public class Card : MonoBehaviour
 
     public GameManager gm;
 
+    private AudioManager audioManager;
+
     public Hand hand;
     void Start()
     {
-       
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
     }
 
     private void OnMouseDown(){
@@ -26,6 +28,7 @@ public class Card : MonoBehaviour
             transform.position += Vector3.down * 3;
             transform.position += Vector3.forward * 3;
             hasBeenPlayed = true;
+            audioManager.PlayRandomTalking();
             destroyCard();
         }
     }
