@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public int availableCardSlots;
     public Hand player_hand;
     public Speach_bubble_script speach_Bubble_Script;
+    
 
     private JokeContainer jokeContainer;
 

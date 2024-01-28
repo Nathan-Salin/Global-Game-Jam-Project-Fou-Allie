@@ -89,7 +89,7 @@ public class Emoji : MonoBehaviour
         { Name_of_Emoji.Shield, "Shield" },
         { Name_of_Emoji.Cool_Dude, "Cool_Dude" },
         { Name_of_Emoji.Thinking, "Thinking" },
-        { Name_of_Emoji.Rock, "Thinking" },
+        { Name_of_Emoji.Rock, "Rock" },
         { Name_of_Emoji.Hockey, "Hockey" },
         { Name_of_Emoji.Snow, "Snow" },
         { Name_of_Emoji.Up, "Up" },

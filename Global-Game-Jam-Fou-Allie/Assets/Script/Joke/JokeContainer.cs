@@ -133,7 +133,7 @@ public class JokeContainer
         new List<Emoji.Name_of_Emoji> { Emoji.Name_of_Emoji.Time, Emoji.Name_of_Emoji.Repeat},
         new List<Emoji.Name_of_Emoji> { Emoji.Name_of_Emoji.Shop, Emoji.Name_of_Emoji.Repeat, Emoji.Name_of_Emoji.Up, Emoji.Name_of_Emoji.Down},
         new List<Emoji.Name_of_Emoji> { Emoji.Name_of_Emoji.Green, Emoji.Name_of_Emoji.Croco},
-        new List<Emoji.Name_of_Emoji> { Emoji.Name_of_Emoji.Thinking, Emoji.Name_of_Emoji.Failing, Emoji.Name_of_Emoji.Discution},
+        new List<Emoji.Name_of_Emoji> { Emoji.Name_of_Emoji.Thinking, Emoji.Name_of_Emoji.Failing, Emoji.Name_of_Emoji.Discution}, //Erreur discussion
         new List<Emoji.Name_of_Emoji> { Emoji.Name_of_Emoji.Smart, Emoji.Name_of_Emoji.Repeat},
         new List<Emoji.Name_of_Emoji> { Emoji.Name_of_Emoji.Book, Emoji.Name_of_Emoji.Insane, Emoji.Name_of_Emoji.Diagonal},
         new List<Emoji.Name_of_Emoji> { Emoji.Name_of_Emoji.Stressed, Emoji.Name_of_Emoji.Sit},
