@@ -5,6 +5,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
+    public Sound[] laughingSounds;
 
     public static AudioManager instance;
     // Start is called before the first frame update
@@ -22,6 +23,13 @@ public class AudioManager : MonoBehaviour
 
     void Start(){
         Play("BackgroundMusic");
+    }
+
+    public void PlayRandomLaughing(){
+        int index = UnityEngine.Random.Range(0, laughingSounds.Length);
+        Sound s=laughingSounds[index];
+        s.source.Play();
+
     }
     public void Play (string name){
         Sound s=Array.Find(sounds, sound => sound.name == name);
