@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
     public Sound[] laughingSounds;
     public Sound[] booSounds;
     public Sound[] fouSounds;
+    public Sound[] claps;
     public Sound mouseClick;
 
     public static AudioManager instance;
@@ -37,6 +38,14 @@ public class AudioManager : MonoBehaviour
             s.source.loop=s.loop;
         }
         foreach (Sound s in fouSounds)
+        {
+            s.source = gameObject.AddComponent<AudioSource>();
+            s.source.clip = s.clip;
+            s.source.volume = s.volume;
+            s.source.pitch = s.pitch;
+            s.source.loop = s.loop;
+        }
+        foreach (Sound s in claps)
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
@@ -92,7 +101,18 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
     }
 
-
+    public void PlayRandomClap()
+    {
+        int index = UnityEngine.Random.Range(0, claps.Length);
+        Sound s = claps[index];
+        s.source.Play();
+        while (s.source.isPlaying)
+        {
+            index = UnityEngine.Random.Range(0, claps.Length);
+            s = claps[index];
+        }
+        s.source.Play();
+    }
 
 
     public void Play (string name){
