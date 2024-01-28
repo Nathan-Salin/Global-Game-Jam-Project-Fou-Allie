@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator NextSceneWithDelay(float x)
     {
+        player_hand.hide_UI();
         yield return StartCoroutine(WaitForXseconds(x));
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
@@ -170,7 +171,7 @@ public class GameManager : MonoBehaviour
         //Add victory_scene
         if(cards_in_game.Count == 0)
         {
-            NextSceneWithDelay(8f);
+            StartCoroutine(NextSceneWithDelay(6f));
             Debug.Log("U WON !");
         }
     }
