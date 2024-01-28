@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Test
-    clip: {fileID: 0}
+  - name: ChangeCard
+    clip: {fileID: 8300000, guid: 18584be17be238c4faf50289739badde, type: 3}
     volume: 0.349
     pitch: 0.1
     source: {fileID: 0}
