@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5528014349909789305}
@@ -103,6 +103,8 @@ MonoBehaviour:
   hasText: 0
   hasBeenHovered: 0
   cardText: {fileID: 2014849935728574768}
+  gm: {fileID: 0}
+  hand: {fileID: 0}
 --- !u!65 &-4610890317817277998
 BoxCollider:
   m_ObjectHideFlags: 0

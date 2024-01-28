@@ -5,8 +5,10 @@ using UnityEngine.UIElements;
 
 public class Hand : MonoBehaviour
 {
-
+    public GameManager gm; 
     private List<GameObject> cardList = new List<GameObject>();
+
+    public Canvas hand_ui;
 
     private int current_card = 0;
 
@@ -41,7 +43,8 @@ public class Hand : MonoBehaviour
     }
 
     public void next_card() {
-        if (cardList.Count!=1) {
+        Debug.Log(gm.gameHasEnded);
+        if (cardList.Count!=1 && gm.gameHasEnded != true) {
             hide_card();
             if (current_card == cardList.Count - 1)
             {
@@ -53,8 +56,9 @@ public class Hand : MonoBehaviour
     }
 
     public void previous_card()
-    {
-        if (cardList.Count != 1)
+    {   
+        Debug.Log(gm.gameHasEnded);
+        if (cardList.Count != 1 && gm.gameHasEnded != true)
         {
             hide_card();
             if(current_card == 0)
@@ -65,6 +69,14 @@ public class Hand : MonoBehaviour
 
             show_card();
         }
+    }
+
+    public void hide_UI(){
+        hand_ui.enabled = false;
+    }
+
+    public void show_UI(){
+        hand_ui.enabled = true;
     }
 
 }

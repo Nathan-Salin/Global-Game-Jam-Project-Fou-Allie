@@ -10,16 +10,24 @@ public class GameManager : MonoBehaviour
     private List<Joke> jokes = new List<Joke>();
     private List<GameObject> cards_in_game = new List<GameObject>();
     private Joke current_joke = null;
-    bool gameHasEnded=false;
+    public bool gameHasEnded=false;
     public GameObject card_prefab;
     public Transform cardSlots;
     public int availableCardSlots;
     public Hand player_hand;
     public Speach_bubble_script speach_Bubble_Script;
 
+    
+
+    public float spawn_interval = 1f;
+    private float timer = 0f;
+
 
     private JokeContainer jokeContainer;
 
+    private IEnumerator waitForXSeconds(float x){
+        yield return new WaitForSeconds(x);
+    }
 
     private void DrawHand(){
         for(int i=0; i<availableCardSlots; i++){
@@ -29,10 +37,12 @@ public class GameManager : MonoBehaviour
 
             GameObject cardInHand = Instantiate(card_prefab, cardSlots);
             cardInHand.SetActive(false);
+ 
             cards_in_game.Add(cardInHand);
 
             Card card = cardInHand.GetComponent<Card>();
             card.hand = player_hand;
+            card.gm = this;
             card.card_joke = joke;
             card.setText(joke.get_full_joke());
 
@@ -59,9 +69,15 @@ public class GameManager : MonoBehaviour
     private void GameOver(){
         if(gameHasEnded==false){
             gameHasEnded=true;
-            Invoke("Restart", 2f);
+            player_hand.hide_card();
+            player_hand.hide_UI();
+            
+
+            waitForXSeconds(2);
+            Restart();
         }
     }
+
     private void Restart(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
@@ -76,13 +92,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Utiliser le temps écoulé pour déterminer le moment du prochain spawn
+        
         for (int i = 0; i < cards_in_game.Count; i++) {
             if (cards_in_game[i] == null)
-            {
+            {   
                 cards_in_game.RemoveAt(i);
-                if (cards_in_game.Count == 0) break;
                 bool isJokeRight = is_joke_right(jokes[i]);
-                jokes.RemoveAt(i);
                 if (!isJokeRight) {
                     GameOver();
                     Debug.Log("U FAILED SON !");
@@ -90,8 +106,12 @@ public class GameManager : MonoBehaviour
                 else
                 {
                     Debug.Log("NICE JOB !");
+                    choose_next_joke();
+                    jokes.RemoveAt(i);
+                    if (cards_in_game.Count == 0) break;
                 }
-                choose_next_joke();
+                
+
             }
         }
 

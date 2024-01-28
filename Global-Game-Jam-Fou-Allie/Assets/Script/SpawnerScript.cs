@@ -39,13 +39,13 @@ public class SpawnerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Utiliser le temps écoulé pour déterminer le moment du prochain spawn
+        // Utiliser le temps Ã©coulÃ© pour dÃ©terminer le moment du prochain spawn
         timer += Time.deltaTime;
 
         if (timer >= spawn_interval && spawn_count < spawm_max)
         {
             GenerateRandomGameObject();
-            timer = 0f; // Réinitialiser le timer
+            timer = 0f; // RÃ©initialiser le timer
         }
     }
 
