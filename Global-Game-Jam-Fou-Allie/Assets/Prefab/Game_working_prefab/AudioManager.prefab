@@ -167,3 +167,22 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
     loop: 0
+  fouSounds:
+  - name: Talking01
+    clip: {fileID: 8300000, guid: db5122b60dd1ac442a21b2398eecb0bc, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Talking02
+    clip: {fileID: 8300000, guid: 3f249adc75fbe4e47a7f61f721839c68, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Talking03
+    clip: {fileID: 8300000, guid: 74d7ecd3b82914c48a9a383cf17c08c1, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
