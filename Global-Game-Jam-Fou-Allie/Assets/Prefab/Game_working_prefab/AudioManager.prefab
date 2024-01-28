@@ -51,12 +51,6 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
     loop: 0
-  - name: BackgroundMusic
-    clip: {fileID: 8300000, guid: 26aa54a0ee1f91c42b573c67a12c1bd1, type: 3}
-    volume: 0.2
-    pitch: 1
-    source: {fileID: 0}
-    loop: 1
   laughingSounds:
   - name: Rire1
     clip: {fileID: 8300000, guid: 3a9cd600d92bf314a8aacc8591df92cd, type: 3}
