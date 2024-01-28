@@ -17,17 +17,7 @@ public class GameManager : MonoBehaviour
     public Hand player_hand;
     public Speach_bubble_script speach_Bubble_Script;
 
-    
-
-    public float spawn_interval = 1f;
-    private float timer = 0f;
-
-
     private JokeContainer jokeContainer;
-
-    private IEnumerator waitForXSeconds(float x){
-        yield return new WaitForSeconds(x);
-    }
 
     private void DrawHand(){
         for(int i=0; i<availableCardSlots; i++){
@@ -72,8 +62,6 @@ public class GameManager : MonoBehaviour
             player_hand.hide_card();
             player_hand.hide_UI();
             
-
-            waitForXSeconds(2);
             Restart();
         }
     }
@@ -97,8 +85,10 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < cards_in_game.Count; i++) {
             if (cards_in_game[i] == null)
             {   
+                Joke joke_played = jokes[i];
+                jokes.RemoveAt(i); 
                 cards_in_game.RemoveAt(i);
-                bool isJokeRight = is_joke_right(jokes[i]);
+                bool isJokeRight = is_joke_right(joke_played);
                 if (!isJokeRight) {
                     GameOver();
                     Debug.Log("U FAILED SON !");
@@ -106,18 +96,16 @@ public class GameManager : MonoBehaviour
                 else
                 {
                     Debug.Log("NICE JOB !");
+                    if(cards_in_game.Count == 0) break;
                     choose_next_joke();
-                    jokes.RemoveAt(i);
-                    if (cards_in_game.Count == 0) break;
                 }
-                
-
             }
         }
 
         //Add victory_scene
         if(cards_in_game.Count == 0)
         {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
             Debug.Log("U WON !");
         }
     }
