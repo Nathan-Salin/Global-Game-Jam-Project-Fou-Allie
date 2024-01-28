@@ -1,2 +1,5 @@
 # Global-Game-Jam-Project
-Répo utilisé pour la Global Gam Jam organisées par l'université de Bordeaux et l'association la Guilde du Dé Libéré.
+Un jeu sur un Fou Allié réalisé dans le cadre de la Global Game Jam.
+
+C'est l'histoire d'un fou pas des plus drôles et des plus malins. Néanmoins celui-ci est doté d'un don unique, le pouvoir de lire dans les pensées ! Mais seulement sous la forme d'émoji !
+Armé de ses meilleures blagues sur les jeux d'échecs, il part à l'aventure pour conquérir le cœur de la reine.
