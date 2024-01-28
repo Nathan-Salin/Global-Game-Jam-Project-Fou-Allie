@@ -144,7 +144,7 @@ public class JokeContainer
         new List<Emoji.Name_of_Emoji> { Emoji.Name_of_Emoji.Love, Emoji.Name_of_Emoji.Queen, Emoji.Name_of_Emoji.Failing},
         new List<Emoji.Name_of_Emoji> { Emoji.Name_of_Emoji.Queen, Emoji.Name_of_Emoji.One},
         new List<Emoji.Name_of_Emoji> { Emoji.Name_of_Emoji.Politician, Emoji.Name_of_Emoji.Repeat},
-        new List<Emoji.Name_of_Emoji> { Emoji.Name_of_Emoji.Dancing_Woman, Emoji.Name_of_Emoji.Dancing_Man},
+        new List<Emoji.Name_of_Emoji> { Emoji.Name_of_Emoji.Queen, Emoji.Name_of_Emoji.Dancing_Woman, Emoji.Name_of_Emoji.Dancing_Man},
         new List<Emoji.Name_of_Emoji> { Emoji.Name_of_Emoji.Magician_Hat, Emoji.Name_of_Emoji.Magic},
         new List<Emoji.Name_of_Emoji> { Emoji.Name_of_Emoji.Vacation, Emoji.Name_of_Emoji.Repeat, Emoji.Name_of_Emoji.Failing},
         new List<Emoji.Name_of_Emoji> { Emoji.Name_of_Emoji.Rock, Emoji.Name_of_Emoji.Music},

@@ -186,3 +186,10 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
     loop: 0
+  mouseClick:
+    name: MouseClick
+    clip: {fileID: 8300000, guid: f469a1aab287c52409824f0561442484, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
