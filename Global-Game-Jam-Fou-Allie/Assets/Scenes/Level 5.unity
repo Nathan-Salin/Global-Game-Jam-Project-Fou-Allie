@@ -5116,7 +5116,7 @@ PrefabInstance:
     - target: {fileID: 8705898735536199356, guid: 97a6889ee55a7594485bf106ab098774, type: 3}
       propertyPath: cardSlots
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2031614605}
     - target: {fileID: 8705898735536199356, guid: 97a6889ee55a7594485bf106ab098774, type: 3}
       propertyPath: player_hand
       value: 
@@ -9501,6 +9501,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1485392634512d4bb75f6b04f77e793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &2031614605 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7777547935600350424, guid: 5d5bc8072fa3e2846915ca69f3c5b77c, type: 3}
+  m_PrefabInstance: {fileID: 2031614603}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2070982160
 GameObject:
   m_ObjectHideFlags: 0

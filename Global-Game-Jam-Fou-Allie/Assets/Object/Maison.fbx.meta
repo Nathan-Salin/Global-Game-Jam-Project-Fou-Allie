@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c25e7079877b2ab468fcdab79d71cd2e
+guid: 76e3147cfa0fa5b4f831d87ca8812887
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,23 +7,28 @@ ModelImporter:
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
+      name: Bigger-Wall
+    second: {fileID: 2800000, guid: 75335f4769519ff4d92dd27bef3c62f9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
       name: Door
-    second: {fileID: 2800000, guid: 9ac135f47cf41064a8b256cb25dbe7de, type: 3}
+    second: {fileID: 2800000, guid: 6263d7636f2b33241a960e126f8e2939, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Roof
-    second: {fileID: 2800000, guid: 44fd0245b54ea9a4994403f28b023a87, type: 3}
+    second: {fileID: 2800000, guid: 6d1acbd69bddf6645b0f8bbc7a1043d3, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: Wall
-    second: {fileID: 2800000, guid: 00ffa808090e2514eaa01a2e9c28fa3a, type: 3}
+      name: Small-Wall
+    second: {fileID: 2800000, guid: f950f364960304241b51c34effad072a, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Window
-    second: {fileID: 2800000, guid: a4ccc32ea0cc2144d9eaf86e437705de, type: 3}
+    second: {fileID: 2800000, guid: b1fe158b663199041801745ea1a0226f, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
