@@ -40355,6 +40355,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8079360974105935444, guid: 136aea96169ffd5498669c0e891d077d, type: 3}
+      propertyPath: sounds.Array.data[0].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079360974105935444, guid: 136aea96169ffd5498669c0e891d077d, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 9019979841454491077, guid: 136aea96169ffd5498669c0e891d077d, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -40364,6 +40372,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 136aea96169ffd5498669c0e891d077d, type: 3}
+--- !u!114 &2115848583490514447 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8079360974105935444, guid: 136aea96169ffd5498669c0e891d077d, type: 3}
+  m_PrefabInstance: {fileID: 2115848583490514446}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6686b89b5f2ebc34d8ba043a54eaab4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8207324884270494377
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40372,22 +40391,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1754334270360836119, guid: 5d5bc8072fa3e2846915ca69f3c5b77c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.813
-      objectReference: {fileID: 0}
     - target: {fileID: 2980240344584237066, guid: 5d5bc8072fa3e2846915ca69f3c5b77c, type: 3}
       propertyPath: m_Name
       value: Hand
       objectReference: {fileID: 0}
+    - target: {fileID: 3047163904060521191, guid: 5d5bc8072fa3e2846915ca69f3c5b77c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2115848583490514447}
+    - target: {fileID: 3326825939882910172, guid: 5d5bc8072fa3e2846915ca69f3c5b77c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2115848583490514447}
     - target: {fileID: 3969724713879049744, guid: 5d5bc8072fa3e2846915ca69f3c5b77c, type: 3}
       propertyPath: gm
       value: 
       objectReference: {fileID: 1067901551}
-    - target: {fileID: 4986313768227889844, guid: 5d5bc8072fa3e2846915ca69f3c5b77c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.804
-      objectReference: {fileID: 0}
     - target: {fileID: 8047174200747366122, guid: 5d5bc8072fa3e2846915ca69f3c5b77c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.715
