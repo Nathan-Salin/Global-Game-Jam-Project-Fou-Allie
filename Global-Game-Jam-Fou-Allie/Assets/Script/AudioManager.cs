@@ -37,18 +37,29 @@ public class AudioManager : MonoBehaviour
     }
 
     void Start(){
-        Play("BackgroundMusic");
+        
     }
 
     public void PlayRandomLaughing(){
         int index = UnityEngine.Random.Range(0, laughingSounds.Length);
         Sound s=laughingSounds[index];
+        while (s.source.isPlaying)
+        {
+            index = UnityEngine.Random.Range(0, laughingSounds.Length);
+            s = laughingSounds[index];
+        }
         s.source.Play();
     }
 
     public void PlayRandomBoo(){
         int index = UnityEngine.Random.Range(0, booSounds.Length);
         Sound s=booSounds[index];
+        s.source.Play();
+        while (s.source.isPlaying)
+        {
+            index = UnityEngine.Random.Range(0, laughingSounds.Length);
+            s = laughingSounds[index];
+        }
         s.source.Play();
     }
 

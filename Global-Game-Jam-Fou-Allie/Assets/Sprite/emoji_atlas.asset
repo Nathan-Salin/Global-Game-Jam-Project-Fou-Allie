@@ -320,8 +320,8 @@ MonoBehaviour:
     m_Unicode: 65534
     m_GlyphIndex: 51
     m_Scale: 1
-    m_Name: Shopping
-    m_HashCode: -680014348
+    m_Name: Shop
+    m_HashCode: 3027108
   - m_ElementType: 2
     m_Unicode: 65534
     m_GlyphIndex: 52
@@ -334,12 +334,6 @@ MonoBehaviour:
     m_Scale: 1
     m_Name: Croco
     m_HashCode: 81018290
-  - m_ElementType: 2
-    m_Unicode: 65534
-    m_GlyphIndex: 54
-    m_Scale: 1
-    m_Name: Thinking
-    m_HashCode: -2116050896
   - m_ElementType: 2
     m_Unicode: 65534
     m_GlyphIndex: 55
@@ -374,8 +368,8 @@ MonoBehaviour:
     m_Unicode: 65534
     m_GlyphIndex: 62
     m_Scale: 1
-    m_Name: "\U0001F3D6\uFE0FVacation"
-    m_HashCode: -486385140
+    m_Name: Vacation
+    m_HashCode: 962603369
   m_SpriteGlyphTable:
   - m_Index: 0
     m_Metrics:
