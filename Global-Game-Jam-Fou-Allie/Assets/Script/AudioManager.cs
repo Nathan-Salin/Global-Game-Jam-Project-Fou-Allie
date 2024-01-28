@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
     public Sound[] laughingSounds;
     public Sound[] booSounds;
     public Sound[] fouSounds;
+    public Sound mouseClick;
 
     public static AudioManager instance;
     // Start is called before the first frame update
@@ -43,6 +44,12 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
+
+        mouseClick.source = gameObject.AddComponent<AudioSource>();
+        mouseClick.source.clip = mouseClick.clip;
+        mouseClick.source.volume = mouseClick.volume;
+        mouseClick.source.pitch = mouseClick.pitch;
+        mouseClick.source.loop = mouseClick.loop;
     }
 
     void Start(){
@@ -94,6 +101,14 @@ public class AudioManager : MonoBehaviour
             return;
         }
         s.source.Play();
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            mouseClick.source.Play();
+        }
     }
 
 }

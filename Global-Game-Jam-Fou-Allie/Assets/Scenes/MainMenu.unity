@@ -455,6 +455,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8079360974105935444, guid: 136aea96169ffd5498669c0e891d077d, type: 3}
+      propertyPath: mouseClick.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f469a1aab287c52409824f0561442484, type: 3}
+    - target: {fileID: 8079360974105935444, guid: 136aea96169ffd5498669c0e891d077d, type: 3}
+      propertyPath: mouseClick.name
+      value: MouseClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079360974105935444, guid: 136aea96169ffd5498669c0e891d077d, type: 3}
       propertyPath: booSounds.Array.size
       value: 9
       objectReference: {fileID: 0}

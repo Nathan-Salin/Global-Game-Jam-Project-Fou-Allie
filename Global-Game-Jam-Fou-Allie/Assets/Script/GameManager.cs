@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
 
     public void ExitTheGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene(0);
     }
 
     private IEnumerator WaitForXseconds(float x)
@@ -49,6 +49,12 @@ public class GameManager : MonoBehaviour
     {
         yield return StartCoroutine(WaitForXseconds(x));
         Restart();
+    }
+
+    private IEnumerator NextSceneWithDelay(float x)
+    {
+        yield return StartCoroutine(WaitForXseconds(x));
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 
@@ -164,7 +170,7 @@ public class GameManager : MonoBehaviour
         //Add victory_scene
         if(cards_in_game.Count == 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
+            NextSceneWithDelay(8f);
             Debug.Log("U WON !");
         }
     }
